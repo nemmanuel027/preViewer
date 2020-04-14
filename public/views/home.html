@@ -1,0 +1,99 @@
+<html ng-app="previewer" ng-controller="homeCtrl" ng-cloak="">
+
+<head>
+  <title>preViewer - HTML on the go</title>
+  <link rel="stylesheet" href="../support/bootstrap.min.css">
+  <link rel="stylesheet" href="../stylesheets/style.css">
+  <link rel="stylesheet" href="../support/font-awesome/css/font-awesome.css">
+  <style>
+  body{
+    padding:0px;
+  }
+
+
+  
+  .navbar{
+      background-color: #2f3133;
+      padding:0px 0px 0px 25px;
+      height: 50px;
+      color: white !important;
+    }
+
+  .navbar-brand
+  {
+    background-color: #0c5a84;
+    position: absolute;
+    padding: 15px;
+    font-weight: bolder;
+  }
+
+  .navbar-nav
+  {
+    margin-left:150px;
+    height: 100%;
+  }
+
+  .btnSignout{
+    padding:10px 10px 0px 0px;
+  }
+
+
+  .row
+  {
+    margin-right: 0px;
+    margin-left: 0px;
+    height: calc(100% - 50px) !important;
+  }
+
+  .col-md-6{
+    padding:0px;
+  }
+
+  .card-body
+  {
+    padding: 0rem;
+  }
+
+  </style>
+</head>
+
+<body>
+
+  
+    <nav class="navbar navbar-expand-sm navbar-dark fixed-top">
+        <a class="navbar-brand active" href="#">preViewer</a>
+        <ul class="navbar-nav">
+        </ul>
+        
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item btnSignout">
+              <button ng-click="powerOff();" class="btn btn-danger"><i class="fa fa-power-off" aria-hidden="true"></i></button>
+            </li>
+          </ul>
+      </nav>
+
+<div class="row" style="margin-top:50px;">
+<div class="col-md-6" style="width: 100%;height: 100%;">
+  <div class="card" style="width: 100%;height: 100%;">
+    <div class="card-header"><b>Workspace</b></div>
+    <div class="card-body" style="width: 100%;height: 100%;">
+      <textarea name="" id="" style="height: 100%;width: 100%; border: none" ng-model="htmlArea" ng-change="changeHtml()"></textarea>
+    </div>
+  </div>
+</div>
+<div class="col-md-6" style="width: 100%;height: 100%;">
+    <div class="card" style="width: 100%;height: 100%;">
+        <div class="card-header"><b>Preview</b></div>
+        <div class="card-body" style="width: 100%;height: 100%;">
+          <iframe id="iframeHtml" src="../html_generated/index.html" frameborder="0" style="width: 100%;height: 100%;"></iframe>
+        </div>
+      </div>
+</div>
+</div>
+  <script src="../support/jquery_slim.min.js"></script>
+  <script src="../support/popper.min.js"></script>
+  <script src="../support/bootstrap.min.js"></script>
+  <script src="../support/angular.min.js"></script>
+  <script src="../javascripts/home.js"></script>
+</body>
+</html>
